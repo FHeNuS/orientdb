@@ -373,7 +373,6 @@ public class OSQLPredicate extends OBaseParser implements OCommandPredicate {
         for (OSQLFilterItemParameter value : parameterItems) {
           if (value.getName().equalsIgnoreCase(paramName)) {
             value.setValue(entry.getValue());
-            break;
           }
         }
       }
