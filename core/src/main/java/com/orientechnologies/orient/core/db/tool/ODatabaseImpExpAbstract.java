@@ -77,7 +77,7 @@ public abstract class ODatabaseImpExpAbstract {
         }
 
         final String option = o.substring(0, sep);
-        final List<String> items = OStringSerializerHelper.smartSplit(o.substring(sep + 1), ' ');
+        final List<String> items = OStringSerializerHelper.smartSplit(o.substring(sep + 1), ',');
 
         parseSetting(option, items);
       }
