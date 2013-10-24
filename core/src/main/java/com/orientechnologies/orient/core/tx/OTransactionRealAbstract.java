@@ -310,6 +310,8 @@ public abstract class OTransactionRealAbstract extends OTransactionAbstract {
       final ORecordOperation rec = allEntries.remove(oldRid);
       if (rec != null)
         allEntries.put(newRid, rec);
+      
+      	((com.orientechnologies.orient.core.id.ORecordId)rec.getRecord().getIdentity()).copyFrom(newRid);
     }
 
     // UPDATE INDEXES
